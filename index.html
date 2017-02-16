@@ -1,0 +1,905 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Летняя школа программирования и робототехники</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link href="http://goto.msk.ru/templates/gk_university/images/favicon.ico" rel="shortcut icon"
+          type="image/vnd.microsoft.icon"/>
+
+    <meta name="description"
+          content="Школа, посвященная проектной работе в IT и робототехнике: веб-сервисы, информационная безопасность, мобильные приложения, игры, анализ данных, VR, промдизайн, нейроинтерфейсы, беспилотники, интернет вещей и многое другое!"/>
+    <meta property="og:title" content="Летняя школа GoTo"/>
+    <meta name="keywords"
+          content="лагерь городского типа, городской лагерь, выездной лагерь, летний лагерь, выездная школа, лагерь для подростков, робототехнический лагерь, компьютерный лагерь, образовательный лагерь, москва, новогодние каникулы">
+    <meta property="og:image" content="http://goto.msk.ru/images/picffb.png">
+
+    <!-- Bootstrap core CSS -->
+    <link rel="stylesheet" href="css/bootstrap.css">
+
+    <!-- Custom Css -->
+    <link rel="stylesheet" href="css/index.css">
+
+    <!-- Минималистический фонт -->
+    <link href="css/ubuntu-font.css" rel="stylesheet">
+
+    <!-- Я прогружаю целую библиотеку для 1 функции, это говнокод, исправлю, сорь -->
+    <script src="js/jquery.js"></script>
+
+    <!-- Google normal-otstups API -->
+    <script async defer
+            src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBSi6YNKwuJPvgEf7WxvYqNVAqbtDc-jnY&callback=initialize"
+            type="text/javascript"></script>
+
+    <!-- Кастомный JS -->
+    <script src="js/index.js"></script>
+</head>
+<body>
+
+<!-- HEADER -->
+<div class="hackathon-header">
+    <!-- Меню в десктопе -->
+    <nav class="desktop">
+        <a onclick="document.getElementById('features').scrollIntoView(true);return false;" class="scroll">Летняя
+            школа</a>
+        <a onclick="document.getElementById('take-part-block').scrollIntoView(true);return false;" class="scroll">Участие</a>
+        <a href="http://goto.msk.ru/">Школа GoTo</a>
+        <a href="http://goto.msk.ru/camp/uchastnikam">Зачисленным</a>
+        <a onclick="document.getElementById('partners').scrollIntoView(true);return false;" class="scroll">Партнёры</a>
+        <a onclick="document.getElementById('footer').scrollIntoView(true);return false;" class="scroll">Контакты</a>
+    </nav>
+
+    <!-- Верхние шарики -->
+    <img id="up" src="images/header/down.png">
+
+    <!-- Текст с картинкой по середине -->
+    <div class="hackathon-header-text">
+        <table>
+            <tr>
+                <td class="half">
+                    <img id="logo" src="images/header/logo_camp.png">
+                </td>
+                <td style="position: relative" class="half">
+                    <div id="text-near-logo">
+                        <h3>Подмосковье</h3>
+                        <h3>Летние</h3>
+                        <h3>Каникулы</h3>
+                    </div>
+
+                    <!-- Соц сети -->
+                    <div class="socials">
+                        <!-- ВК -->
+                        <a href="https://vk.com/goto_msk">
+                            <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 96 96" style="enable-background:new 0 0 96 96;" xml:space="preserve"><g>
+	<path d="M53.174,52.908c-1.539-0.896-3.678-0.896-5.416-0.896h-5.707v11.76h5.238
+		c1.939,0,4.412,0.139,6.084-1.035c1.535-1.033,2.404-3.061,2.404-4.992C55.777,55.951,54.709,53.805,53.174,52.908z M51.021,42.865
+		c1.27-0.967,1.936-2.691,1.936-4.279c0-1.725-0.801-3.381-2.27-4.277c-1.537-0.896-4.346-0.689-6.15-0.689h-2.486v10.35h3.289
+		C47.211,43.969,49.418,44.107,51.021,42.865z M79.125,0H16.873C7.555,0,0,7.555,0,16.875v62.25C0,88.443,7.555,96,16.873,96h62.252
+		C88.443,96,96,88.443,96,79.125v-62.25C96,7.555,88.443,0,79.125,0z M50.604,72.535H30.992V25.201H52.42
+		c6.207,0,11.934,3.951,11.934,10.92c0,5.381-3.004,9.066-6.836,10.211v0.139c5.682,1.174,9.74,4.26,9.74,11.705
+		C67.258,65.066,62.566,72.535,50.604,72.535z"/>
+</g></svg>
+                        </a>
+                        <br>
+                        <!-- Facebook -->
+                        <a href="https://www.facebook.com/pages/GoTo-Camp/1517446851839524">
+                            <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 23.101 23.101" style="enable-background:new 0 0 23.101 23.101;" xml:space="preserve">
+<g>
+	<path d="M8.258,4.458c0-0.144,0.02-0.455,0.06-0.931c0.043-0.477,0.223-0.976,0.546-1.5c0.32-0.522,0.839-0.991,1.561-1.406
+		C11.144,0.208,12.183,0,13.539,0h3.82v4.163h-2.797c-0.277,0-0.535,0.104-0.768,0.309c-0.231,0.205-0.35,0.4-0.35,0.581v2.59h3.914
+		c-0.041,0.507-0.086,1-0.138,1.476l-0.155,1.258c-0.062,0.425-0.125,0.819-0.187,1.182h-3.462v11.542H8.258V11.558H5.742V7.643
+		h2.516V4.458z"/>
+</svg>
+                        </a>
+                        <br>
+                        <!-- Instagram -->
+                        <a href="http://instagram.com/goto_goto_goto">
+                            <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 width="97.395px" height="97.395px" viewBox="0 0 97.395 97.395" style="enable-background:new 0 0 97.395 97.395;"
+	 xml:space="preserve">
+<g>
+	<path d="M12.501,0h72.393c6.875,0,12.5,5.09,12.5,12.5v72.395c0,7.41-5.625,12.5-12.5,12.5H12.501C5.624,97.395,0,92.305,0,84.895
+		V12.5C0,5.09,5.624,0,12.501,0L12.501,0z M70.948,10.821c-2.412,0-4.383,1.972-4.383,4.385v10.495c0,2.412,1.971,4.385,4.383,4.385
+		h11.008c2.412,0,4.385-1.973,4.385-4.385V15.206c0-2.413-1.973-4.385-4.385-4.385H70.948L70.948,10.821z M86.387,41.188h-8.572
+		c0.811,2.648,1.25,5.453,1.25,8.355c0,16.2-13.556,29.332-30.275,29.332c-16.718,0-30.272-13.132-30.272-29.332
+		c0-2.904,0.438-5.708,1.25-8.355h-8.945v41.141c0,2.129,1.742,3.872,3.872,3.872h67.822c2.13,0,3.872-1.742,3.872-3.872V41.188
+		H86.387z M48.789,29.533c-10.802,0-19.56,8.485-19.56,18.953c0,10.468,8.758,18.953,19.56,18.953
+		c10.803,0,19.562-8.485,19.562-18.953C68.351,38.018,59.593,29.533,48.789,29.533z"/>
+</g>
+</svg>
+                        </a>
+                        <br>
+                        <!-- Twitter -->
+                        <a href="https://twitter.com/goto_camp">
+                            <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 612 612" style="enable-background:new 0 0 612 612;" xml:space="preserve">
+<g>
+	<g>
+		<path d="M612,116.258c-22.525,9.981-46.694,16.75-72.088,19.772c25.929-15.527,45.777-40.155,55.184-69.411
+			c-24.322,14.379-51.169,24.82-79.775,30.48c-22.907-24.437-55.49-39.658-91.63-39.658c-69.334,0-125.551,56.217-125.551,125.513
+			c0,9.828,1.109,19.427,3.251,28.606C197.065,206.32,104.556,156.337,42.641,80.386c-10.823,18.51-16.98,40.078-16.98,63.101
+			c0,43.559,22.181,81.993,55.835,104.479c-20.575-0.688-39.926-6.348-56.867-15.756v1.568c0,60.806,43.291,111.554,100.693,123.104
+			c-10.517,2.83-21.607,4.398-33.08,4.398c-8.107,0-15.947-0.803-23.634-2.333c15.985,49.907,62.336,86.199,117.253,87.194
+			c-42.947,33.654-97.099,53.655-155.916,53.655c-10.134,0-20.116-0.612-29.944-1.721c55.567,35.681,121.536,56.485,192.438,56.485
+			c230.948,0,357.188-191.291,357.188-357.188l-0.421-16.253C573.872,163.526,595.211,141.422,612,116.258z"/>
+	</g>
+</g>
+</svg>
+                        </a>
+                    </div>
+                </td>
+            </tr>
+        </table>
+        <div class="take-part">
+            <a class="white"
+               href="https://docs.google.com/forms/d/e/1FAIpQLSedwS8vH9cAYtBOGIimi6Bdb8V7JRoZar4XtsDV6ibBKwsEvg/viewform">Принять
+                участие</a>
+        </div>
+    </div>
+
+    <!-- Нижние шарики -->
+    <img id="down" src="images/header/up.png">
+
+</div>
+
+<!-- Second block =) -->
+<div id="features" class="features green-background">
+    <table>
+        <tr>
+            <td valign="middle">
+                <div class="container green-background">
+                    <div class="row">
+                        <div class="col-md-4 feature">
+                            <img src="images/features/1.png">
+                            <h4>Летняя школа</h4>
+                            <p>Этим летом в Подмосковье пройдёт серия выездных школ для старшеклассников и студентов,
+                                интересующихся
+                                программированием, робототехникой, анализом данных и биоинформатикой. Участников ждут
+                                интересные проекты и новые знакомства.</p>
+                        </div>
+
+                        <div class="col-md-4 feature">
+                            <img src="images/features/2.png">
+                            <h4>Направления</h4>
+                            <p>Каждый участник получит возможность реализовать свой проект под руководством экспертов:
+                                создать
+                                мобильные
+                                приложения и web-сервисы, умные устройства и беспилотники, познакомиться с big data,
+                                виртуальной
+                                реальностью, биоинформатикой, нейротехнологиями и т.д.</p>
+                        </div>
+
+                        <div class="col-md-4 feature mini">
+                            <img src="images/features/3.png">
+                            <h4>Программа</h4>
+                            <p>В программе школы помимо реализации проектов представлены различные мастер-классы,
+                                встречи с
+                                учеными
+                                и
+                                успешными предпринимателями, профориентационные игры, экскурсии в компании и встречи со
+                                стартапами,
+                                а
+                                также спорт, творчество и теплые ламповые вечера у костра.</p>
+                        </div>
+                    </div>
+                    <div class="feature-text white-background">
+                        <p>GoTo помогает участникам: самостоятельно принимать решения, ставить цели и шаг за шагом,
+                            достигать
+                            их,
+                            развить мотивацию к получению новых знаний, расширить кругозор, осознать свои возможности и
+                            приобрести
+                            уверенность для дальнейшего саморазвития, научиться работать в команде, завести новых друзей
+                            и
+                            единомышленников.</p>
+                    </div>
+                </div>
+            </td>
+        </tr>
+    </table>
+</div>
+
+<!-- Участие -->
+<div id="take-part-block" class="take-part-block">
+    <h2 class="main-header">Участие</h2>
+    <!-- Нижняя штука с галками -->
+    <div class="container">
+        <div class="row">
+
+            <div class="col-md-3">
+                <div class="galka">
+                    <img src="images/ticks/1.png">
+                    <p>Старшеклассники и <br> студенты 1-2 курса</p>
+                </div>
+            </div>
+
+            <div class="col-md-3">
+                <div class="galka">
+                    <img src="images/ticks/2.png">
+                    <p>Подача заявки <br></p>
+                </div>
+            </div>
+
+            <div class="col-md-3">
+                <div class="galka">
+                    <img src="images/ticks/3.png">
+                    <p>Стоимость участия - 46 т.р. <br>
+                        После 1 мая - 50 т.р.</p>
+                </div>
+            </div>
+
+            <div class="col-md-3">
+                <div class="galka">
+                    <img src="images/ticks/4.png">
+                    <p>Зачисление и оплата <br></p>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+<div class="row dates">
+    <div class="container">
+        <h2 class="main-header">Даты проведения</h2>
+
+        <div class="col-md-4">
+            <h3 style="font-size: 30px;">13-26 июня</h3>
+        </div>
+
+        <div class="col-md-4">
+            <h3 style="font-size: 30px;">1-14 июля</h3>
+        </div>
+
+        <div class="col-md-4">
+            <h3 style="font-size: 30px;">16-29 августа</h3>
+        </div>
+    </div>
+</div>
+
+<!-- Смефнявые иконки в оранжевом аде -->
+<div class="mini-features">
+    <div class="container">
+        <h2 class="main-header">Что ждёт участников?</h2>
+        <div class="row">
+            <div class="col-md-2">
+                <img src="images/mini-features/1.png">
+                <p>Проектная<br>деятельность</p>
+            </div>
+
+            <div class="col-md-2">
+                <img src="images/mini-features/2.png">
+                <p>Лекции<br>и воркшопы</p>
+            </div>
+
+            <div class="col-md-2">
+                <img src="images/mini-features/3.png">
+                <p>Единомышленники<br>и новые идеи</p>
+            </div>
+
+            <div class="col-md-2">
+                <img src="images/mini-features/4.png">
+                <p>Эмоции и<br>общение</p>
+            </div>
+
+            <div class="col-md-2">
+                <img src="images/mini-features/5.png">
+                <p>Встречи с<br>экспертами</p>
+            </div>
+
+            <div class="col-md-2">
+                <img src="images/mini-features/6.png">
+                <p>Спорт и <br>игры</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Весёлые покрутяшки -->
+<div class="krutyashki">
+    <div class="container">
+        <div class="row crugleski">
+            <div class="opisanie">
+                <a onclick="awesome()">
+                    <svg width="64" version="1.1" xmlns="http://www.w3.org/2000/svg" height="64" viewBox="0 0 64 64"
+                         xmlns:xlink="http://www.w3.org/1999/xlink" enable-background="new 0 0 64 64">
+                        <g>
+                            <path
+                                    d="M28.941,31.786L0.613,60.114c-0.787,0.787-0.787,2.062,0,2.849c0.393,0.394,0.909,0.59,1.424,0.59   c0.516,0,1.031-0.196,1.424-0.59l28.541-28.541l28.541,28.541c0.394,0.394,0.909,0.59,1.424,0.59c0.515,0,1.031-0.196,1.424-0.59   c0.787-0.787,0.787-2.062,0-2.849L35.064,31.786L63.41,3.438c0.787-0.787,0.787-2.062,0-2.849c-0.787-0.786-2.062-0.786-2.848,0   L32.003,29.15L3.441,0.59c-0.787-0.786-2.061-0.786-2.848,0c-0.787,0.787-0.787,2.062,0,2.849L28.941,31.786z"/>
+                        </g>
+                    </svg>
+                </a>
+                <table>
+                    <td valign="middle">
+                        <p class="programm-text">В начинающей группе запланирован базовый курс из лекций и воркшопов,
+                            сопровождающихся заданиями из различных областей, в рамках которых ребята сделают 5-6
+                            мини-проектов.<br>
+                            Участники, попавшие в старшую группу по результатам тестирования, все время посвятят
+                            реализации основного проекта в командах. Их ждут как технологические мастер-классы, так и
+                            семинары по организации работы в проекте, формированию тз и исследованию требований от
+                            пользователей, тестированию, а также ежедневная работа под руководством куратора и общение с
+                            опытными разработчиками.
+                        </p>
+
+                        <p class="robot-text">
+                            Участники направления будут разделены на 2 группы: Опытные ребята возьмутся сразу за проекты
+                            – пройдут все стадии от идеи до реализации. Второй поток специально предназначен для
+                            новичков, которые получат базовые навыки и инструментарий: познакомятся с платформой Arduino
+                            и средой разработки; научатся работать с различными датчиками, микросхемами, сервомоторами и
+                            объединять это все, чтобы получить умные устройства.
+                            <br>
+                            Каждый участник направления получит к концу школы результат в виде прототипа или
+                            законченного устройства, а также пройдет серию мастер-классов по проектной работе,
+                            промдизайну и 3д-печати, интернету вещей.
+                        </p>
+
+                        <p class="cool_feature_text">
+                            Небольшая группа участников с опытом в прикладном программировании займется изучением одной
+                            из самых актуальных тем – анализ данных и машинное обучение. Ребята реализуют
+                            исследовательские проекты и познакомятся с Big Data, Machine Learning и SNA, освоят основные
+                            инструментарии и разберутся с математикой и статистикой, которые стоят за основными методами
+                            в этих областях.
+
+                        </p>
+
+                        <p class="bio-text">
+                            Биоинформатика - это стремительно развивающаяся область, точка смешения биологии, медицины,
+                            информатики и математики, целью которой является выявление новых биологических
+                            закономерностей алгоритмическими и статистическими методами. С развитием технологий
+                            появилась возможность исследовать весь геном организма в целом, определять уровни активности
+                            генов, исследовать их более сложные взаимодействия.
+                            <br>
+                            Участники узнают об основных задачах биоинформатики, получат опыт работы с реальными
+                            данными, рассмотрят примеры современных исследований. К участию приглашаются все, кто хочет
+                            познакомиться с новой областью и попробовать силы в решении нестандартных междисциплинарных
+                            задач. Знание биологии не является обязательным в отличие от базового знания Python/R.
+                        </p>
+                    </td>
+                </table>
+            </div>
+            <div onclick="cool(0)" class="up flip-container col-md-6">
+                <div class="flipper">
+                    <div class="front robot">
+                        <table>
+                            <td valign="middle"><h3>Робототехника</h3></td>
+                        </table>
+                    </div>
+                    <div class="back robot-back">
+                        <table>
+                            <img src="images/arrow.png">
+                        </table>
+                    </div>
+                </div>
+            </div>
+            <div onclick="cool(1)" class="up flip-container vertical col-md-6">
+                <div class="flipper">
+                    <div class="front programm">
+                        <table>
+                            <td valign="middle"><h3>Прикладное программирование</h3></td>
+                        </table>
+                    </div>
+                    <div class="back programm-back">
+                        <table>
+                            <img src="images/arrow.png">
+
+                        </table>
+                    </div>
+                </div>
+            </div>
+            <div onclick="ntcool(2)" class="down flip-container vertical col-md-6">
+                <div class="flipper">
+                    <div class="front ad">
+                        <table>
+                            <td valign="middle"><h3>Анализ данных</h3></td>
+                        </table>
+                    </div>
+                    <div class="back ad-back">
+                        <table>
+                            <img src="images/arrow.png">
+                        </table>
+                    </div>
+                </div>
+            </div>
+            <div onclick="ntcool(3)" class="down flip-container col-md-6">
+                <div class="flipper">
+                    <div class="front bio">
+                        <table>
+                            <td valign="middle"><h3>Биоинформатика</h3></td>
+                        </table>
+                    </div>
+                    <div class="back bio-back">
+                        <table>
+                            <img src="images/arrow.png">
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<!-- Наши препы -->
+<div class="prepi">
+    <table>
+        <tr>
+            <td valign="middle">
+                <h2 class="main-header">Преподаватели и гости</h2>
+                <div class="container">
+                    <div class="row">
+
+                        <div class="col-md-6 prep">
+                            <div class="row">
+                                <div class="col-md-4 xs-force-center">
+                                    <img src="images/prepi/p1.jpg">
+                                </div>
+                                <div class="col-md-8">
+                                    <h3>Алексей Перепёлкин</h3>
+                                    <p>Руководитель направления робототехники GoTo и ЛИОТ МФТИ, автор
+                                        онлайн-курса на
+                                        Coursera "Строим роботов на Arduino", автор и судья номинации "Hello,
+                                        Robot!
+                                        Arduino" Робофеста, организатор Роболабораторий от КРОК.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6 prep">
+                            <div class="row">
+                                <div class="col-md-4 xs-force-center">
+                                    <img src="images/prepi/p2.jpg">
+                                </div>
+                                <div class="col-md-8">
+                                    <h3>Иван Бибилов</h3>
+                                    <p>
+                                        Руководитель направления прикладного программирования GoTo, куратор
+                                        образовательных программ Яндекса, преподаватель различных курсов в
+                                        университетах
+                                        и школы анализа данных Яндекса.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6 prep">
+                            <div class="row">
+                                <div class="col-md-4 xs-force-center">
+                                    <img src="images/prepi/p3.jpg">
+                                </div>
+                                <div class="col-md-8">
+                                    <h3>Надежда Янушкевич</h3>
+                                    <p>Руководитель направления поддержки и развития школьного IT-образования
+                                        компании
+                                        КРОК, специалист по корпоративной культуре, организатор соревнований,
+                                        хакатонов
+                                        и школ.</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-md-6 prep">
+                            <div class="row">
+                                <div class="col-md-4 xs-force-center">
+                                    <img src="images/prepi/p7.jpg">
+                                </div>
+                                <div class="col-md-8">
+                                    <h3>Александр Панин</h3>
+                                    <p>
+                                        Специалист в области машинного обучения, разработчик проектов
+                                        CERN-Яндекс,
+                                        преподаватель ФКН ВШЭ и школы анализа данных Яндекса, ЛЭШ.</p>
+                                </div>
+                            </div>
+                        </div>
+
+
+                        <div class="col-md-12">
+                            <div class="col-md-6 prep hid">
+                                <div class="row">
+                                    <div class="col-md-4 xs-force-center">
+                                        <img src="images/prepi/p12.jpg">
+                                    </div>
+                                    <div class="col-md-8">
+                                        <h3>Александр Петров</h3>
+                                        <p>
+                                            Специалист в области машинного обучения и рекомендательных систем,
+                                            технический
+                                            директор E-contenta, руководил R&D-отделом Data-Centric Alliance,
+                                            работал в
+                                            Tinkoff, Яндекс и Mail.Ru.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-6 prep hid">
+                                <div class="row">
+                                    <div class="col-md-4 xs-force-center">
+                                        <img src="images/prepi/p10.jpg">
+                                    </div>
+                                    <div class="col-md-8">
+                                        <h3>Николай Кутрухин</h3>
+                                        <p>
+                                            Преподаватель направления робототехники в GoTo, специалист в области
+                                            программной
+                                            инженерии, координатор МКШ, руководитель робототехнических кружков.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+
+                        <div class="col-md-6 prep hid">
+                            <div class="row">
+                                <div class="col-md-4 xs-force-center">
+                                    <img src="images/prepi/p14.jpeg">
+                                </div>
+                                <div class="col-md-8">
+                                    <h3>Ростислав Бородин</h3>
+                                    <p>
+                                        Выпускник ФКН НИУ ВШЭ по направлению Прикладная математика и
+                                        информатика,
+                                        преподаватель лаборатории робототехники Политеха.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6 prep hid">
+                            <div class="row">
+                                <div class="col-md-4 xs-force-center">
+                                    <img src="http://bioinformaticsinstitute.ru/sites/default/files/shchukina_irina.jpg">
+                                </div>
+                                <div class="col-md-8">
+                                    <h3>Ирина Щукина</h3>
+                                    <p>
+                                        Окончила факультет Прикладной математики и процессов управления в СПбГУ. В школе
+                                        и на младших
+                                        курсах университета участвовала в исследованиях Института молекулярной биологии
+                                        и генетики центра им. В.А. Алмазова. Текущие проекты связаны с анализом данных
+                                        RNA-seq.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-12">
+                            <div class="col-md-6 prep hid">
+                                <div class="row">
+                                    <div class="col-md-4 xs-force-center">
+                                        <img src="images/prepi/p16.png">
+                                    </div>
+                                    <div class="col-md-8">
+                                        <h3>Дмитрий Бугайченко</h3>
+                                        <p>
+                                            Закончил Санкт-Петербургский Государственный Университет в 2004 году, там же
+                                            защитил кандидатскую по формально-логическим методам в 2007. Более пяти лет
+                                            занимается анализом данных в социальной сети "Одноклассники".</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-md-6 prep hid">
+                                <div class="row">
+                                    <div class="col-md-4 xs-force-center">
+                                        <img src="images/prepi/p15.png">
+                                    </div>
+                                    <div class="col-md-8">
+                                        <h3>Игорь Бездворных</h3>
+                                        <p>
+                                            Биоинформатик, выпускник и сотрудник Института Биоинформатики при СПБАУ
+                                            РАН.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-md-6 prep hid">
+                            <div class="row">
+                                <div class="col-md-4 xs-force-center">
+                                    <img src="images/prepi/p18.jpg">
+                                </div>
+                                <div class="col-md-8">
+                                    <h3>Яковлев Павел</h3>
+                                    <p>
+                                        Директор департамента вычислительной биологии BIOCAD. Департамент
+                                        создает алгоритмы и применяет методы математического моделирования для
+                                        решения
+                                        задач по созданию лекарственных препаратов.</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-md-6 prep hid">
+                            <div class="row">
+                                <div class="col-md-4 xs-force-center">
+                                    <img src="http://bioinformaticsinstitute.ru/sites/default/files/dobrynin.png">
+                                </div>
+                                <div class="col-md-8">
+                                    <h3>Павел Добрынин</h3>
+                                    <p>
+                                        Биоинформатик, Научный сотрудник Центра геномной биоинформатики им.
+                                        Ф.Г.Добржанского.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-12">
+                            <div class="col-md-6 prep hid">
+                                <div class="row">
+                                    <div class="col-md-4 xs-force-center">
+                                        <img src="images/prepi/p17.jpg">
+                                    </div>
+                                    <div class="col-md-8">
+                                        <h3>Елизавета Шашковская</h3>
+                                        <p>
+                                            Биоинформатик, Научный сотрудник Центра геномной биоинформатики им.
+                                            Ф.Г.Добржанского.</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-md-6 prep hid">
+                                <div class="row">
+                                    <div class="col-md-4 xs-force-center">
+                                        <img src="http://bioinformaticsinstitute.ru/sites/default/files/prjibelski_0.jpg">
+                                    </div>
+                                    <div class="col-md-8">
+                                        <h3>Андрей Пржибельский</h3>
+                                        <p>
+                                            Выпускник СПбГПУ ФТК (бакалавр) и СПбАУ РАН (магистр), аспирант СПбАУ РАН,
+                                            научный сотрудник Лаборатории алгоритмической биологии СПбАУ РАН.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6 prep hid">
+                            <div class="row">
+                                <div class="col-md-4 xs-force-center">
+                                    <img src="http://bioinformaticsinstitute.ru/sites/default/files/prodanov.timofey.png">
+                                </div>
+                                <div class="col-md-8">
+                                    <h3>Тимофей Проданов</h3>
+                                    <p>
+                                        Вёл интенсив по
+                                        питону для биологов на летней школе по биоинформатике и сейчас преподаю годовой
+                                        курс питона для биологов в Институте биоинформатики. Исследую проблемы,
+                                        связанные с V(D)J рекомбинацией совместно с Центром алгоритмической
+                                        биотехнологии.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="more-gosti">
+                    <a onclick="toggle()">Просмотреть всех</a>
+                </div>
+            </td>
+        </tr>
+    </table>
+</div>
+
+<!-- Место проведения -->
+<div>
+    <div class="map-title">
+        <h2 class="main-header">Место проведения</h2>
+    </div>
+    <div id="map"></div>
+</div>
+
+<!-- Партнёры -->
+<div id="partners" class="partners normal-otstup">
+    <table>
+        <tr>
+            <td valign="middle">
+                <div class="header">
+                    <h2 class="main-header">Партнёры</h2>
+                </div>
+                <div class="container">
+                    <div class="row">
+                        <div class="partner col-md-3 little-partner">
+                            <table>
+                                <td valign="middle"><a href="https://mipt.ru/"><img src="images/partners/mfti.png"></a>
+                                </td>
+                            </table>
+                        </div>
+                        <div class="partner col-md-3 little-partner">
+                            <table>
+                                <td valign="middle"><a href="http://www.croc.ru/"><img
+                                        src="images/partners/croc.png"></a></td>
+                            </table>
+                        </div>
+                        <div class="partner col-md-3 little-partner">
+                            <table>
+                                <td valign="middle"><a href="http://www.intel.ru/"><img src="images/partners/intel.png"></a>
+                                </td>
+                            </table>
+                        </div>
+                        <div class="partner col-md-3 little-partner">
+                            <table>
+                                <td valign="middle"><a href="https://www.hse.ru/"><img
+                                        src="images/partners/hse.jpg"></a></td>
+                            </table>
+                        </div>
+                        <div class="partner col-md-3">
+                            <table>
+                                <td valign="middle"><a href="https://www.rvc.ru/"><img
+                                        src="images/partners/rvk.png"></a></td>
+                            </table>
+                        </div>
+                        <!--<div class="partner col-md-3 little-partner">-->
+                        <!--<table>-->
+                        <!--<td valign="middle"><a href="https://biocad.ru/"><img-->
+                        <!--src="https://biocad.ru/themes/default/images/logo.png"></a>-->
+                        <!--</td>-->
+                        <!--</table>-->
+                        <!--</div>-->
+                        <!--<div class="partner col-md-3 little-partner">-->
+                        <!--<table>-->
+                        <!--<td valign="middle"><a href="http://edurobots.ru/"><img-->
+                        <!--src="http://bioinformaticsinstitute.ru/sites/default/files/bi15_logo_hrz_rus_0.png"></a>-->
+                        <!--</td>-->
+                        <!--</table>-->
+                        <!--</div>-->
+                        <!--<div class="partner col-md-3 little-partner">-->
+                        <!--<table>-->
+                        <!--<td valign="middle"><a href="https://www.jetbrains.com/"><img-->
+                        <!--src="http://www.underconsideration.com/brandnew/archives/jetbrains_logo_detail.jpg"></a>-->
+                        <!--</td>-->
+                        <!--</table>-->
+                        <!--</div>-->
+                        <div class="partner col-md-3 big-partner">
+                            <table>
+                                <td valign="middle"><a href="https://www.abbyy.com/ru-ru/"><img
+                                        src="images/partners/logo_abbyy.png"></a></td>
+                            </table>
+                        </div>
+
+                        <div class="partner col-md-3 big-partner">
+                            <table>
+                                <td valign="middle"><a href="https://e-contenta.com/"><img
+                                        src="http://goto.msk.ru/hackathon/images/dca.png"></a></td>
+                            </table>
+                        </div>
+                        <!--<div class="partner col-md-3 little-partner">-->
+                        <!--<table>-->
+                        <!--<td valign="middle"><a href="http://parseq.pro/ru"><img-->
+                        <!--src="images/partners/parse.png"></a></td>-->
+                        <!--</table>-->
+                        <!--</div>-->
+                        <div class="partner col-md-3 little-partner">
+                            <table>
+                                <td valign="middle"><a href="http://codeforces.com/"><img
+                                        src="images/partners/codeforces.png"></a></td>
+                            </table>
+                        </div>
+                        <!--<div class="partner col-md-3 little-partner">-->
+                        <!--<table>-->
+                        <!--<td valign="middle"><a href="https://www.genotek.ru/"><img-->
+                        <!--src="images/partners/genotek.png"></a></td>-->
+                        <!--</table>-->
+                        <!--</div>-->
+                        <!--<div class="partner col-md-3 little-partner">-->
+                        <!--<table>-->
+                        <!--<td valign="middle"><a href="https://v.ok.ru/"><img-->
+                        <!--src="https://v.ok.ru/res/img/logos/ok-horizontal-white.png"></a>-->
+                        <!--</td>-->
+                        <!--</table>-->
+                        <!--</div>-->
+                        <!--<div class="partner col-md-3 big-partner">-->
+                        <!--<table>-->
+                        <!--<td valign="middle"><a href="http://www.popmech.ru/"><img-->
+                        <!--src="images/partners/popmech.png"></a></td>-->
+                        <!--</table>-->
+                        <!--</div>-->
+                        <!--<div class="partner col-md-3 little-partner">-->
+                        <!--<table>-->
+                        <!--<td valign="middle"><a href="https://newtonew.com/"><img-->
+                        <!--src="images/partners/newtonew.png"></a></td>-->
+                        <!--</table>-->
+                        <!--</div>-->
+                        <!--<div class="partner col-md-3 little-partner">-->
+                        <!--<table>-->
+                        <!--<td valign="middle"><a href="https://newtonew.com/"><img-->
+                        <!--src="http://biomolecula.ru/img/logo.png"></a></td>-->
+                        <!--</table>-->
+                        <!--</div>-->
+                        <!--<div class="partner col-md-3 little-partner">-->
+                        <!--<table>-->
+                        <!--<td valign="middle"><a href="http://edurobots.ru/"><img-->
+                        <!--src="images/partners/edurobots.png"></a></td>-->
+                        <!--</table>-->
+                        <!--</div>-->
+                    </div>
+                </div>
+            </td>
+        </tr>
+    </table>
+</div>
+
+<!-- Подвальчик -->
+<div id="footer" class="footer">
+    <div class="green-line"></div>
+    <div class="container">
+        <div class="row footer-inside ">
+            <div class="col-md-2  not-mobile">
+                <img src="images/logo.png">
+            </div>
+            <div class="mobile"><img style="margin: 0 auto; float: none; display: block" src="images/logo.png"></div>
+
+            <div class="col-md-4 description not-mobile">
+                <p>Образовательный проект, посвященный проектной деятельности в различных высокотехнологических
+                    областях. Использование визуальных материалов только с согласия создателей проекта. Все
+                    права
+                    защищены. </p>
+            </div>
+
+            <div class="description mobile">
+                <p style="text-align: center">Образовательный проект, посвященный проектной деятельности в различных
+                    высокотехнологических
+                    областях. Использование визуальных материалов только с согласия создателей проекта. Все
+                    права
+                    защищены. </p>
+            </div>
+            <div class="col-md-6 contacts">
+                <div class="not-mobile">
+                    <h4>Контакты</h4>
+                    <p><a style="color: rgb(230, 25, 25)" href="tel:89852443226">+7 (985) 2443226</a></p>
+                    <a><a style="color: rgb(230, 25, 25)" href="mailto:school@goto.msk.ru">school@goto.msk.ru</a></a>
+                </div>
+                <div class="mobile">
+                    <h4 style="text-align: center">Контакты</h4>
+                    <p style="text-align: center"><a style="color: rgb(230, 25, 25)" href="tel:89852443226">+7 (985)
+                        2443226</a></p>
+                    <p style="text-align: center"><a style="color: rgb(230, 25, 25)" href="mailto:school@goto.msk.ru">school@goto.msk.ru</a>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<!-- Трекер большого брата -->
+<div style='display: none;'>
+    <!-- Yandex.Metrika informer -->
+    <a href="https://metrika.yandex.ru/stat/?id=27106058&amp;from=informer"
+       target="_blank" rel="nofollow"><img src="//bs.yandex.ru/informer/27106058/3_1_FFFFFFFF_EFEFEFFF_0_pageviews"
+                                           style="width:88px; height:31px; border:0;" alt="Яндекс.Метрика"
+                                           title="Яндекс.Метрика: данные за сегодня (просмотры, визиты и уникальные посетители)"
+                                           onclick="try{Ya.Metrika.informer({i:this,id:27106058,lang:'ru'});return false}catch(e){}"/></a>
+    <!-- /Yandex.Metrika informer -->
+
+    <!-- Yandex.Metrika counter -->
+    <script type="text/javascript">
+        (function (d, w, c) {
+            (w[c] = w[c] || []).push(function () {
+                try {
+                    w.yaCounter27106058 = new Ya.Metrika({
+                        id: 27106058,
+                        webvisor: true,
+                        clickmap: true,
+                        trackLinks: true,
+                        accurateTrackBounce: true
+                    });
+                } catch (e) {
+                }
+            });
+
+            var n = d.getElementsByTagName("script")[0],
+                    s = d.createElement("script"),
+                    f = function () {
+                        n.parentNode.insertBefore(s, n);
+                    };
+            s.type = "text/javascript";
+            s.async = true;
+            s.src = (d.location.protocol == "https:" ? "https:" : "http:") + "//mc.yandex.ru/metrika/watch.js";
+
+            if (w.opera == "[object Opera]") {
+                d.addEventListener("DOMContentLoaded", f, false);
+            } else {
+                f();
+            }
+        })(document, window, "yandex_metrika_callbacks");
+    </script>
+    <noscript>
+        <div><img src="//mc.yandex.ru/watch/27106058" style="position:absolute; left:-9999px;" alt=""/></div>
+    </noscript>
+</div>
+
+</body>
+</html>
